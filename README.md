@@ -1,5 +1,4 @@
-# HackCamp - Next.js Project
-
+# HackCamp 
 A Next.js project scaffolded with TypeScript and Tailwind CSS.
 
 ## Getting Started
