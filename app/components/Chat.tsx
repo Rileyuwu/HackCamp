@@ -39,7 +39,7 @@ export default function Chat() {
   return (
     <div className="w-full max-w-2xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
       <h2 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-        💬 Chat with AI
+        💬 GPT integration.
       </h2>
       
       <form onSubmit={handleSubmit} className="mb-4">
