@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Counter from "./components/Counter";
+import Chat from "./components/Chat";
 
 export default function Home() {
   return (
@@ -15,6 +16,10 @@ export default function Home() {
 
         <div className="mb-8">
           <Counter />
+        </div>
+
+        <div className="mb-8">
+          <Chat />
         </div>
 
         <div className="grid gap-4 md:grid-cols-2 mb-8">
