@@ -1,64 +1,72 @@
-import Link from "next/link";
-import Counter from "./components/Counter";
 import Chat from "./components/Chat";
+import InstallationDropdown from "./components/InstallationDropdown";
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-8">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-6">
-          Welcome to HackCamp 🚀
-        </h1>
-        
-        <p className="text-lg mb-8 text-gray-600 dark:text-gray-400">
-          Your Next.js app is ready! Check out the example API route below.
-        </p>
-
-        <div className="mb-8">
-          <Counter />
+    <main className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+      <div className="max-w-6xl mx-auto px-4 py-12">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            HackCamp 🚀
+          </h1>
+          <p className="text-xl text-gray-600 dark:text-gray-300">
+            Next.js project with ChatGPT integration
+          </p>
         </div>
 
-        <div className="mb-8">
+        {/* Contributors */}
+        <div className="mb-8 text-center">
+          <p className="text-gray-700 dark:text-gray-300 mb-2">
+            <span className="font-semibold">Project created by:</span>
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {['Riley', 'Zan', 'Ryan', 'David'].map((name) => (
+              <span
+                key={name}
+                className="px-4 py-2 bg-white dark:bg-gray-800 rounded-full shadow-md text-gray-700 dark:text-gray-300 font-medium"
+              >
+                {name}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Installation Dropdown */}
+        <div className="mb-12">
+          <InstallationDropdown />
+        </div>
+
+        {/* Chat Component */}
+        <div className="mb-12">
           <Chat />
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2 mb-8">
-          <div className="p-6 border rounded-lg">
-            <h2 className="text-xl font-semibold mb-2">Example API</h2>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-              See the example API route at /api/hello
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+            <div className="text-3xl mb-3">🤖</div>
+            <h3 className="text-xl font-semibold mb-2">AI Chat</h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Integrated ChatGPT for intelligent conversations
             </p>
-            <Link 
-              href="/api/hello" 
-              className="text-blue-600 hover:underline"
-            >
-              Visit API Route →
-            </Link>
           </div>
 
-          <div className="p-6 border rounded-lg">
-            <h2 className="text-xl font-semibold mb-2">Get Started</h2>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-              Start editing app/page.tsx to build your app
+          <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+            <div className="text-3xl mb-3">⚡</div>
+            <h3 className="text-xl font-semibold mb-2">Next.js 14</h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Built with the latest Next.js App Router
             </p>
-            <Link 
-              href="https://nextjs.org/docs" 
-              className="text-blue-600 hover:underline"
-              target="_blank"
-            >
-              Read Docs →
-            </Link>
           </div>
-        </div>
 
-        <div className="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
-          <h3 className="text-lg font-semibold mb-2">Quick Tips:</h3>
-          <ul className="list-disc list-inside space-y-1 text-sm">
-            <li>API routes go in <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded">app/api/</code></li>
-            <li>Pages are created automatically from files in <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded">app/</code></li>
-            <li>Use <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded">use client</code> for client-side interactivity</li>
-            <li>Components go in <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded">app/components/</code></li>
-          </ul>
+          <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+            <div className="text-3xl mb-3">🎨</div>
+            <h3 className="text-xl font-semibold mb-2">Tailwind CSS</h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Beautiful, responsive UI with Tailwind
+            </p>
+          </div>
         </div>
       </div>
     </main>

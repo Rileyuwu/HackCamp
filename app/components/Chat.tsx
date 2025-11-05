@@ -37,8 +37,10 @@ export default function Chat() {
   }
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-6 border rounded-lg bg-white dark:bg-gray-800">
-      <h2 className="text-2xl font-semibold mb-4">Chat</h2>
+    <div className="w-full max-w-2xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+      <h2 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        💬 Chat with AI
+      </h2>
       
       <form onSubmit={handleSubmit} className="mb-4">
         <textarea
@@ -52,16 +54,16 @@ export default function Chat() {
         <button
           type="submit"
           disabled={loading || !message.trim()}
-          className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:bg-gray-400 disabled:cursor-not-allowed"
+          className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 disabled:from-gray-400 disabled:to-gray-400 disabled:cursor-not-allowed font-medium shadow-md transition-all"
         >
           {loading ? 'Sending...' : 'Send'}
         </button>
       </form>
 
       {response && (
-        <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
-          <h3 className="font-semibold mb-2">Response:</h3>
-          <p className="whitespace-pre-wrap">{response}</p>
+        <div className="mt-4 p-4 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-700 dark:to-gray-700 rounded-lg border border-blue-200 dark:border-gray-600">
+          <h3 className="font-semibold mb-2 text-gray-800 dark:text-gray-200">Response:</h3>
+          <p className="whitespace-pre-wrap text-gray-700 dark:text-gray-300">{response}</p>
         </div>
       )}
     </div>
