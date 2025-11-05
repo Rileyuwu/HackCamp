@@ -17,13 +17,21 @@ export default function Home() {
             <span className="font-semibold">Project created by:</span>
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            {['Riley', 'Zan', 'Ryan', 'David'].map((name) => (
-              <span
-                key={name}
-                className="px-4 py-2 bg-white dark:bg-gray-800 rounded-full shadow-md text-gray-700 dark:text-gray-300 font-medium"
+            {[
+              { name: 'Riley', github: 'https://github.com/Rileyuwu' },
+              { name: 'Zan', github: 'https://github.com/qtzan' },
+              { name: 'Ryan', github: 'https://github.com/Ryan-LIU22' },
+              { name: 'David', github: 'https://github.com/davidhchng' },
+            ].map((contributor) => (
+              <a
+                key={contributor.name}
+                href={contributor.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-white dark:bg-gray-800 rounded-full shadow-md text-gray-700 dark:text-gray-300 font-medium hover:shadow-lg hover:text-blue-600 dark:hover:text-blue-400 transition-all cursor-pointer"
               >
-                {name}
-              </span>
+                {contributor.name}
+              </a>
             ))}
           </div>
         </div>
