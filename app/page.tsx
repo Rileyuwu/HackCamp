@@ -1,4 +1,5 @@
 import InstallationDropdown from "./components/InstallationDropdown";
+import Chat from "./components/Chat";
 
 export default function Home() {
   return (
@@ -74,6 +75,11 @@ export default function Home() {
         {/* Installation Dropdown */}
         <div className="mb-12">
           <InstallationDropdown />
+        </div>
+
+        {/* Chat Component */}
+        <div className="mb-12">
+          <Chat />
         </div>
       </div>
     </main>
